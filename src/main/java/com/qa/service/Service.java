@@ -27,16 +27,14 @@ public class Service {
 		return accountMap.get(index);
 		
 	}
-	
-	
+		
 	public void addAccount(String firstName,String lastName,String accountNumber)
 	{
 		Account myAccount = new Account(firstName,lastName,accountNumber);
 		accountMap.put(counter, myAccount);
 		counter ++;
 		
-	}
-	
+	}	
 	
 	public void accountRemoval(int index)
 	{
@@ -52,9 +50,7 @@ public class Service {
 		
 		System.out.println("Account No: "+accountNumber+" Name:"+firstName+" "+lastName);
 	}
-	
-	
-	
+		
 	
 	public void accountOutputJson(Account myAccount)
 	{
@@ -73,6 +69,7 @@ public class Service {
 			{accountOutput(getAccount(index));}
 		}
 	}
+	
 	
 	
 

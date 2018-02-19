@@ -3,6 +3,7 @@ package com.qa.app;
 //app
 
 import com.qa.service.Service;
+import com.qa.util.JSONUtil;
 
 public class App {
 
@@ -10,6 +11,7 @@ public class App {
 		System.out.println("Hello World");
 		
 		Service myService= new Service();
+		JSONUtil convertor = new JSONUtil();
 		
 		myService.addAccount("Sean", "McGee", "SM001");
 		myService.addAccount("Niall", "Mulready", "SM002");
@@ -21,6 +23,10 @@ public class App {
 		System.out.println("--------------------");
 		
 		myService.allAccountsOutput("json");
+		
+		System.out.println("--------------------");
+		
+		System.out.println(convertor.accountOutputJson(myService));
 
 	}
 
