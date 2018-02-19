@@ -42,6 +42,46 @@ public class Service {
 		
 	}	
 	
+	public void addAccount(Account myAccount)
+	{
+		accountMap.put(counter, myAccount);
+		counter ++;
+		
+	}	
+	
+	
+	
+	
+	/*public int searchFirstname(String searchItem) {
+		// TODO Auto-generated method stub
+		
+		int result=0;
+		
+		for(Account eachAccount: accountMap.values())
+		{
+			if(eachAccount.getFirstName().equals(searchItem))
+			{
+				result++;
+			}
+		}
+		
+		return result;
+	}
+	
+	*/
+	
+	public int searchFirstname(String searchItem) {
+		// TODO Auto-generated method stub
+		
+		return (int) accountMap.values().stream().filter(eachAccount -> eachAccount.getFirstName().equals(searchItem)).count();
+	}
+	
+	
+	
+	
+	
+	
+	
 	public void accountRemoval(int index)
 	{
 		accountMap.remove(index);
