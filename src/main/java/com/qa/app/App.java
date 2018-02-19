@@ -16,7 +16,7 @@ public class App {
 		
 		myService.allAccountsOutput();
 		
-		System.out.println("------------------");
+		System.out.println("--------------------");
 		
 		myService.allAccountsOutputJson();
 
