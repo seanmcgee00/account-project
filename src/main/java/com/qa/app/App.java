@@ -1,5 +1,9 @@
 package com.qa.app;
 
+//app
+
+import com.qa.service.Service;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -12,7 +16,11 @@ public class App {
 		myService.addAccount("Ian", "Cunningham", "CM001");
 		myService.addAccount("Breandan", "Green", "SM003");
 		
-		myService.accountOutput();
+		myService.allAccountsOutput("java");
+		
+		System.out.println("--------------------");
+		
+		myService.allAccountsOutput("json");
 
 	}
 
