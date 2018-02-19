@@ -16,11 +16,11 @@ public class App {
 		myService.addAccount("Ian", "Cunningham", "CM001");
 		myService.addAccount("Breandan", "Green", "SM003");
 		
-		myService.allAccountsOutput();
+		myService.allAccountsOutput("java");
 		
 		System.out.println("--------------------");
 		
-		myService.allAccountsOutputJson();
+		myService.allAccountsOutput("json");
 
 	}
 

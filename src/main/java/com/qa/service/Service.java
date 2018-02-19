@@ -56,30 +56,26 @@ public class Service {
 	
 	
 	
-	public void accountsOutputJson(int index)
+	public void accountOutputJson(Account myAccount)
 	{
 		Gson gsonAccount= new GsonBuilder().create();
-		System.out.println( gsonAccount.toJson(getAccount(index)));
+		System.out.println( gsonAccount.toJson(myAccount));
 		
 	}
 	
-	public void allAccountsOutput()
+	public void allAccountsOutput(String type)
 	{
 		for(int index=0; index< accountMap.size(); index++)
 		{
-			accountOutput(getAccount(index));
+			if (type.equals("json"))
+			{accountOutputJson(getAccount(index));}
+			else
+			{accountOutput(getAccount(index));}
 		}
 	}
 	
 	
-	public void allAccountsOutputJson()
-	{
-		for(int index=0; index< accountMap.size(); index++)
-		{
-			accountsOutputJson(index);
-			
-		}
-	}
+
 	
 	
 	
