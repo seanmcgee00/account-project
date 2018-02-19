@@ -5,19 +5,16 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import com.qa.service.Service;
-import com.qa.util.JSONUtil;
 
 import junit.framework.Assert;
 
 public class AccountSearchTest {
 
-	Search accountSearcher;
-	
+	Search accountSearcher= new Search();
+	Service myService= new Service();
 	@Before
 	public void init()
-	{
-		Service myService= new Service();
-		
+	{	
 		myService.addAccount("Sean", "McGee", "SM001");
 		myService.addAccount("Niall", "Mulready", "SM002");
 		myService.addAccount("Ian", "Cunningham", "CM001");
@@ -26,11 +23,8 @@ public class AccountSearchTest {
 	
 	@Test
 	public void searchTest() {
-		int result=accountSearcher("Sean");
-		
-		Assert.assertEquals(1, result);
-		
-		fail("Not yet implemented");
+		int result=accountSearcher.searchFirstname("Sean",myService);
+		Assert.assertEquals(1, result);		
 	}
 
 }

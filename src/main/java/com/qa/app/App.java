@@ -1,5 +1,7 @@
 package com.qa.app;
 
+import com.qa.search.Search;
+
 //app
 
 import com.qa.service.Service;
@@ -27,6 +29,12 @@ public class App {
 		System.out.println("--------------------");
 		
 		System.out.println(convertor.accountOutputJson(myService));
+		
+		
+		
+		Search accountSearch = new Search();
+		int result=accountSearch.searchFirstname("Sean", myService);
+		System.out.println("result="+result);
 
 	}
 

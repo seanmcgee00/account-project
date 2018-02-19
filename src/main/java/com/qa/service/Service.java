@@ -27,7 +27,13 @@ public class Service {
 		return accountMap.get(index);
 		
 	}
-		
+	
+	public Map<Integer,Account> getMap()
+	{
+		return accountMap;
+	}
+	
+	
 	public void addAccount(String firstName,String lastName,String accountNumber)
 	{
 		Account myAccount = new Account(firstName,lastName,accountNumber);
