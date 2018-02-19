@@ -1,6 +1,6 @@
 package com.qa.app;
 
-//App
+
 
 import com.qa.service.Service;
 
